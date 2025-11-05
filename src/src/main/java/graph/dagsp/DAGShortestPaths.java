@@ -7,7 +7,7 @@ import java.util.*;
 public class DAGShortestPaths {
     private final Graph g;
     private final Metrics metrics;
-
+    private int countRelax=0;
     public DAGShortestPaths(Graph g, Metrics metrics) {
         this.g = g;
         this.metrics = metrics;
