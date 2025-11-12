@@ -1,6 +1,7 @@
-package graph.scc;
+package java.graph.scc;
 
 import graph.Graph;
+import graph.scc.TarjanSCC;
 import util.Metrics;
 import org.junit.jupiter.api.Test;
 
@@ -14,8 +15,8 @@ public class TarjanSCCTest {
         Graph g = new Graph(5);
         g.addEdge(0,1);
         g.addEdge(1,2);
-        g.addEdge(2,0); // cycle of 3
-        g.addEdge(3,4); // separate edge
+        g.addEdge(2,0);
+        g.addEdge(3,4);
         Metrics m = new Metrics();
         TarjanSCC t = new TarjanSCC(g, m);
         List<List<Integer>> comps = t.getComponents();
